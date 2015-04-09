@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+content_name=`git status|grep content|awk -F '/' '{print $2}'|xargs`
+git add content
+git commit -m "add content $content_name"
+git push origin master
+
+mv .git .gitback
+make publish
+git clone git@github.com:xuanmingyi/xuanmingyi.github.com.git xuanmingyi.github.com
+cp -r output/* xuanmingyi.github.com
+cd xuanmingyi.github.com;git add .;git commit -m "auto push at `date`";git push origin master
+rm -rf xuanmingyi.github.com
+mv .gitback .git
