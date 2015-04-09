@@ -1,3 +1,6 @@
 [submodule "pelican-octopress-theme"]
 	path = pelican-octopress-theme
 	url = git@github.com:duilio/pelican-octopress-theme.git
+[submodule "xuanmingyi.github.com"]
+	path = xuanmingyi.github.com
+	url = git@github.com:xuanmingyi/xuanmingyi.github.com.git
