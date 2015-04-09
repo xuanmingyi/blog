@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-content_name=`git status|grep content|awk -F '/' '{print $2}'|xargs`
+content_name=`git status|grep content|awk -F '/' '{print $2}'`
 git add content
 git commit -m "add content $content_name"
 git push origin master
