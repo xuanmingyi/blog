@@ -4,6 +4,8 @@ Tags: Docker
 Authors: Sin
 Category: Technology
 
+![](https://d3oypxn00j2a10.cloudfront.net/0.17.3/img/nav/docker-logo-loggedout.png)
+
 **如何进入docker，并且退出**
 
 docker attach 进入某个contaienr之后, _ctrl+p_ _ctrl+q_ ，让container后台运行，exit则直接退出container，整个container stop了.
