@@ -38,8 +38,6 @@ Baidu上的死链怎么去除呢？查看Baidu站长工具.
 
 百度的链接是以 `http://www.baidu.com/?link=` 的形式，这个页面 返回一个403， 临时重定向到真实URL，如果页面是404，我们就可以从URLError Exception中找到code和forward url。
 
-`re`的`findall`, `search`, `match`模块
-
 
 **最后**
 
