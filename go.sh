@@ -6,7 +6,7 @@ git push origin master
 
 mv .git git
 make publish
-git clone https://github.com:xuanmingyi/xuanmingyi.github.com.git xuanmingyi.github.com
+git clone https://github.com/xuanmingyi/xuanmingyi.github.com.git xuanmingyi.github.com
 cp -r output/* xuanmingyi.github.com
 cd xuanmingyi.github.com
 git add .
