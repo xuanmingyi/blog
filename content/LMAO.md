@@ -5,3 +5,5 @@ Authors: Sin
 Category: Pictures
 
 ![](http://i.imgur.com/V6DhRa0.jpg)
+
+朋友 你的屁股掉了
