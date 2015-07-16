@@ -8,9 +8,10 @@ Category: Technology
 [上一篇](http://blog.xuanmingyi.com/gerrit-with-github1.html)中，初步部署好了Gerrit，然后可以使用Github账户登录，第一个登录的默认为Admin用户。
 
 ###加入*SSH Public Key*
-把本机的公钥加入Gerrit中的*SSH Public Key*。
-把本机的公钥加入到Github中的*SSH Public Key*。
-把服务器上的公钥加入到*SSH Public Key*。
+
+* 把本机的公钥加入Gerrit中的*SSH Public Key*。
+* 把本机的公钥加入到Github中的*SSH Public Key*。
+* 把服务器上的公钥加入到*SSH Public Key*。
 
 ###导入Github中的项目
 
