@@ -15,7 +15,7 @@ Category: Technology
 
 ###导入Github中的项目
 
-创建一个test项目，先进行初始化。
+Github上创建项目，并在本地进行初始化。
 
 	git clone git@github.com:xuanmingyi/test.git
 	cd test
@@ -24,16 +24,17 @@ Category: Technology
 	git commit -m "init project"
 	git push origin master
 	
-在Gerrit上创建项目
+使用ssh在Gerrit上创建项目
 
 	ssh -p 29418 username@host gerrit create-project test #填上自己username和host
 	
-删除项目，导入Github项目
+在服务器上找到git目录，并删除项目，导入Github项目
 
 	cd ~/git
 	rm -fr test.git
 	git clone --bare git@github.com:xuanmingyi/test.git
-	
+
+
 给项目添加`.gitreview`文件
 
 	cat >.gitreview <<EOF
