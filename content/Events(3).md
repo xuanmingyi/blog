@@ -116,6 +116,6 @@ Summary: Xlib 事件
 
 
 
-* [**ButtonPress 和 ButtonRelease **](http://www.lithum.tech/index.php/archives/30/)
-* [**MotionNotify**](http://www.lithum.tech/index.php/archives/31/)
+* [**ButtonPress 和 ButtonRelease **](/xlib-events-buttonpress-buttonrelease.html)
+* [**MotionNotify**](/xlib-events-motionnofity.html)
 

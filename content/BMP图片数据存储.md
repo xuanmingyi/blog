@@ -126,5 +126,5 @@ BMP 维基百科上已经解释的非常清楚了。一图看懂！
 
 #### 特别注意
 
-* 我们常用的颜色其实是RGB,而BMP的存储格式是  B G R,但是，正好，xlib中的颜色顺序也是B G R。所以我们一一对应就可以了。如果使用其他图片库，比如[stb_image操作图片](http://www.lithum.tech/index.php/archives/27/), 那么一定要注意颜色顺序。
+* 我们常用的颜色其实是RGB,而BMP的存储格式是  B G R,但是，正好，xlib中的颜色顺序也是B G R。所以我们一一对应就可以了。如果使用其他图片库，比如[stb_image操作图片](/xlib-stb-image.html), 那么一定要注意颜色顺序。
 * 注意BMP像素存储顺序和xlib中XImage像素存储顺序的不同。需要做一个转换

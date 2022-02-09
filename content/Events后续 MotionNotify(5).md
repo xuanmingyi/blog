@@ -5,7 +5,7 @@ Slug: xlib-events-motionnofity
 Authors: sin
 Summary: Xlib中的MotionNotify事件
 
-这是[上一篇文章Events(3)](http://www.lithum.tech/index.php/archives/29/)的补充说明
+这是[上一篇文章Events(3)](/xlib-events.html)的补充说明
 
 
 

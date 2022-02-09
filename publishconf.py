@@ -17,5 +17,5 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = "blog.lithum.tech"
+#DISQUS_SITENAME = "blog.lithum.tech"
 #GOOGLE_ANALYTICS = ""

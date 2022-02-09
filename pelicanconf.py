@@ -1,5 +1,5 @@
 AUTHOR = 'sin'
-SITENAME = 'blog.lithum.tech'
+SITENAME = 'www.lithum.tech'
 SITEURL = ''
 
 PATH = 'content'
@@ -26,7 +26,7 @@ LINKS = (('home', '/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 15
+DEFAULT_PAGINATION = 10
 
 THEME = "pelican-theme-jesuislibre"
 # Uncomment following line if you want document-relative URLs when developing
