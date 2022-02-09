@@ -31,3 +31,6 @@ DEFAULT_PAGINATION = 15
 THEME = "pelican-theme-jesuislibre"
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+STATIC_PATHS = ['extra/favicon.ico', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, 'extra/favicon.ico': {'path': 'favicon.ico'}, }
