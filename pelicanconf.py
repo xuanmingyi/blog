@@ -34,3 +34,6 @@ THEME = "pelican-theme-jesuislibre"
 
 STATIC_PATHS = ['extra/favicon.ico', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, 'extra/favicon.ico': {'path': 'favicon.ico'}, }
+
+
+AUTHOR_IMG="https://gitee.com/xuanmingyi/imagebed/raw/master/img/avator.jpg"

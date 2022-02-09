@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>{{ article.title }}</h1>
-<div class=date>{{ article.locale_date }}</div>
+<div class=date>{{ article.locale_date }} / Post by <a href="{{ AUTHOR_LINK }}">{{ AUTHOR }}</a></div>
 
 {{ article.content }}
 
@@ -18,7 +18,6 @@
 </div>
 {% endif %}
 
-{% include 'author.html' %}
 {% include 'disqus.html' %}
 {% include 'cacause.html' %}
 
