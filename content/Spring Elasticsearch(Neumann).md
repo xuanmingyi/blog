@@ -165,6 +165,9 @@ Summary: Spring Elasticsearch Neumann 使用指南
     select * from metric_server where name = 'agenttest' and timestamp > '2021-02-10 00:00:00'
 
 
+同样的，我们可以使用下面代码做测试
+
+
     :::java
     @Test
     void testQuery() {
@@ -195,10 +198,7 @@ Summary: Spring Elasticsearch Neumann 使用指南
 ![png](https://gitee.com/xuanmingyi/imagebed/raw/master/img/20220211000208.png)
 
 
-
 其中**filter**和**must**在这里是一致的，但是他们在ES里还是有差别的，详细参考 
-
-
 
 * [ElasticSearch中must和filter的区别](https://blog.csdn.net/fechinchu/article/details/112235154)
 * [Es检索 must与filter区别](https://blog.csdn.net/weixin_45362084/article/details/112171627?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_paycolumn_v3&utm_relevant_index=1)
@@ -207,24 +207,56 @@ Summary: Spring Elasticsearch Neumann 使用指南
 
 ### 查询并排序
 
+查询并测试
 
+    :::sql
+    select * from metric_server where name = 'agenttest' order by timestamp desc;
 
-### 分页
+使用下面代码测试
 
-### 集合 
+    :::java
+    @Data
+    class TestObject {
+        private String name;
+        private String region;
+        private String resourceId;
+        private String timestamp;
+    }
 
+    @Test
+    void testQuery() {
 
+        TermQueryBuilder termQuery = QueryBuilders.termQuery("name", "agenttest");
 
+        SortBuilder sortBuilder = SortBuilders.fieldSort("timestamp").order(SortOrder.DESC);
+
+        Query query = new NativeSearchQueryBuilder()
+                .withQuery(termQuery)
+                .withSort(sortBuilder)
+                .build();
+
+        IndexCoordinates indexCoordinates = IndexCoordinates.of("metric_server");
+
+        List<TestObject> objs =  elasticsearchRestTemplate.queryForList(query, TestObject.class, indexCoordinates);
+
+        System.out.println(objs.size());
+
+        for ( int i = 0 ; i < objs.size() ;i++) {
+            System.out.println(objs.get(i));
+        }
+    }
+
+查看结果
+
+![png](https://gitee.com/xuanmingyi/imagebed/raw/master/img/20220211115650.png)
 
 
 ### 参考
 
-
-
-* https://www.cnblogs.com/jelly12345/p/14765477.html
-* https://www.jianshu.com/p/56e755415e63
-* https://blog.csdn.net/weixin_43814195/article/details/85281287
-* https://www.cnblogs.com/moxiaotao/p/10843523.html
-* https://blog.csdn.net/xx105/article/details/83827755
-* https://blog.51cto.com/shadowisper/2393555
-* https://blog.csdn.net/qq_42764468/article/details/107570357
+* [springboot中ElasticSearch入门与进阶：组合查询、聚合查询](https://www.cnblogs.com/jelly12345/p/14765477.html)
+* [Spring Data Elasticsearch使用](https://www.jianshu.com/p/56e755415e63)
+* [【必看】SpringBoot整合Spring Data Elasticsearch](https://blog.csdn.net/weixin_43814195/article/details/85281287)
+* [ElasticSearch AggregationBuilders java api常用聚会查询](https://www.cnblogs.com/moxiaotao/p/10843523.html)
+* [ElasticSearch-AggregationBuilders查询遇到的坑](https://blog.csdn.net/xx105/article/details/83827755)
+* [Elasticsearch Aggregation 笔记](https://blog.51cto.com/shadowisper/2393555)
+* [Spring Data Elasticsearch](https://blog.csdn.net/qq_42764468/article/details/107570357)
